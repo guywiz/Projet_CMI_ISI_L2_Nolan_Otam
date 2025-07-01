@@ -1,0 +1,34 @@
+#Création base
+
+CREATE TABLE metiers (
+    code_metier_BMO VARCHAR(15) PRIMARY KEY,
+    nom_metier VARCHAR(50),
+    code_famille_BMO INTEGER,
+    FOREIGN KEY(code_famille_BMO) REFERENCES familles_metier(code_famille_BMO)
+);
+
+CREATE TABLE familles_metier (
+    code_famille_BMO VARCHAR(15) PRIMARY KEY,
+    famille_metier VARCHAR(50)
+);
+
+CREATE TABLE recrutements (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    met INTEGER,
+    xmet INTEGER,
+    smet INTEGER,
+    code_metier_BMO VARCHAR(50),
+    code_bassin VARCHAR(50),
+    annee INTEGER,
+    FOREIGN KEY(code_metier_BMO) REFERENCES metier(code_metier_BMO),
+    FOREIGN KEY(code_bassin) REFERENCES geo(code_bassin)
+);
+
+CREATE TABLE geo (
+    code_bassin VARCHAR(50) PRIMARY KEY,
+    nom_bassin VARCHAR(50),
+    dept INTEGER,
+    nom_dept VARCHAR(50),
+    reg INTEGER,
+    nom_reg VARCHAR(50)
+);
