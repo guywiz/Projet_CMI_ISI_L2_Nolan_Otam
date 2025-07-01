@@ -3,6 +3,7 @@
 
 Ce projet consiste à développer une application de visualisation de données sur l'emploi, en utilisant la librairie Dash de Python. Les données sont obtenues à partir du site data.gouv.fr et stockées dans une base de données. L'application est conçue selon le modèle MVC, avec un contrôleur qui dispose de callbacks pour exercer son contrôle sur les événements de l'application.
 
+<img src="./documentation/Screenshot.png" width="80%">
   
 
 ## Installation
